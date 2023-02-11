@@ -135,6 +135,7 @@ Run image:
 ```bash
 docker run --name some-mongo -d mongo
 ```
+
 ## **MongoDB** Atlas
 
 [**MongoDB** Atlas](https://www.mongodb.com/cloud/atlas/register) is a cloud clustering service that supports multiple providers such as AWS, Azure and GCP, with Atlas you can have a **MongoDB** cluster in a few steps and leaving aside all kinds of worries about hardware and software upgrades.
