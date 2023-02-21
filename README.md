@@ -142,7 +142,7 @@ docker run --name some-mongo -d mongo
 
 ## Drivers
 
-Using **MongoDB** is easy with its officially drivers and libraries. In this dojo in the [languages](./languages/README.md) folder you can find examples of how to use **MongoDB** with Python, Nodejs and go.
+Using **MongoDB** is easy with its officially drivers and libraries. In this dojo in the [languages](./languages/README.md) folder you can find a practical example of how to use **MongoDB** with Python, Nodejs, go and **MongoDB** Shell.
 
 Other languages officially supported by **MongoDB**:
 * [C](https://www.mongodb.com/docs/drivers/c/)
@@ -154,3 +154,25 @@ Other languages officially supported by **MongoDB**:
 * [Rust](https://www.mongodb.com/docs/drivers/rust/)
 * [Scala](https://www.mongodb.com/docs/drivers/scala/)
 * [Swift](https://mongodb.github.io/mongo-swift-driver/docs/current/MongoSwift/index.html)
+
+## **MongoDB** Compass
+
+**MongoDB** Compass is a powerful GUI for querying, aggregating, and analyzing your **MongoDB** data in a visual environment.
+
+Compass is free to use and source available, and can be run on macOS, Windows, and Linux.
+
+### **Linux**
+
+Download:
+```bash
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.35.0_amd64.deb
+```
+
+Install:
+```bash
+sudo dpkg -i mongodb-compass_1.35.0_amd64.deb
+```
+
+### **Windows** and **macOS**
+
+On the official **MongoDB** [website](https://www.mongodb.com/try/download/compass) you will find the executables to install on Windows and macOS.
