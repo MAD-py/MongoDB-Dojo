@@ -156,11 +156,11 @@ With this code we have updated the value of the course that has the name "Cloud 
 ```js
 let updateDocument = await Course
     .updateMany(
-        { instructor: { name: "Jose Gomez Gomez" } },
+        { "instructor.name": "Jose Gomez Gomez" },
         { $set: { certifies: true } },
     )
     .exec();
-console.log(updateDocument.toObject());
+console.log(updateDocument);
 ```
 
 With this operation we have updated all the courses of the instructor "Jose Gomez Gomez", it is necessary to clarify that if any course of the instructor already had the certified value in true, this operation will overwrite it with the same value.
