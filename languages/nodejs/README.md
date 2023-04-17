@@ -1,6 +1,6 @@
 # Mongoose (ODM)
 
-Mongoose is an Object Document Mapper (ODM) to manipulate MongoDB from Nodejs, with mongoose we will be able to manipulate the connections and the basic configurations of the database.
+Mongoose is an Object Document Mapper (ODM) to manipulate **MongoDB** from Nodejs, with mongoose we will be able to manipulate the connections and the basic configurations of the database.
 
 ## Install
 
@@ -12,7 +12,7 @@ npm install mongoose
 
 ## Connect to **MongoDB**
 
-Now to make the connection between our code in Nodejs and MongoDB it is necessary to have the following lines of code.
+Now to make the connection between our code in Nodejs and **MongoDB** it is necessary to have the following lines of code.
 
 ```js
 import mongoose from 'mongoose';
@@ -135,7 +135,7 @@ let documents = await Course.find({ certifies: true }).exec();
 console.log(documents);
 ```
 
-With this modification we will only get the courses that have certificates, in MongoDB there are multiple operators to make filters as complex as we want, if you are interested in knowing more about the operators that MongoDB offers you can consult them in the following [link](https://www.mongodb.com/docs/manual/reference/operator/query/).
+With this modification we will only get the courses that have certificates, in **MongoDB** there are multiple operators to make filters as complex as we want, if you are interested in knowing more about the operators that **MongoDB** offers you can consult them in the following [link](https://www.mongodb.com/docs/manual/reference/operator/query/).
 
 ## Update Courses
 
@@ -185,7 +185,7 @@ After this operation our "course" collection should be empty.
 
 ***Note:** To continue with the Dojo it is necessary to recreate all the courses, it is recommended to rerun the two code snippets exposed in the Dojo to create new documents in a collection.*
 
-Now that we know how to use the basic operations it is time to test how the relations work inside *MongoDB*, for this now we will create a new user and we will obtain the created document.
+Now that we know how to use the basic operations it is time to test how the relations work inside **MongoDB**, for this now we will create a new user and we will obtain the created document.
 
 ## Create Users
 
@@ -214,7 +214,7 @@ let documentInDB = await newDocument.save();
 console.log(documentInDB.toObject());
 ```
 
-As in the definition of the schemas it was indicated that the courses.completed and courses.started fields are of type ObjectID with reference to the courses, mongoose directly transforms the strings that we pass to referenced ids. It should be noted that these relations do not work as in the sql database, since if the id that we put as relation does not exist in any MongoDB collection, it will not generate any type of error.
+As in the definition of the schemas it was indicated that the courses.completed and courses.started fields are of type ObjectID with reference to the courses, mongoose directly transforms the strings that we pass to referenced ids. It should be noted that these relations do not work as in the sql database, since if the id that we put as relation does not exist in any **MongoDB** collection, it will not generate any type of error.
 
 ## Read Users
 
@@ -225,7 +225,7 @@ let documents = await User.find({}).exec();
 console.log(documents);
 ```
 
-If we want the relations to be resolved it is necessary to tell MongoDB to do it, this can be done with the following code.
+If we want the relations to be resolved it is necessary to tell **MongoDB** to do it, this can be done with the following code.
 
 ```js
 let documents = await User.aggregate([
@@ -253,4 +253,4 @@ We can notice that we no longer use the find method to obtain the documents of a
 
 The result of this is the same as executing the find method but this time we will get a list of objects that are the user's courses, instead of a list of just ids.
 
-These are the most basic operations that can be performed on a collection, but within MongoDB there are many other operations, in case you want to continue learning about MongoDB and mongoose I invite you to visit the official [website](https://mongoosejs.com/docs/guides.html) of mongoose.
+These are the most basic operations that can be performed on a collection, but within **MongoDB** there are many other operations, in case you want to continue learning about **MongoDB** and mongoose I invite you to visit the official [website](https://mongoosejs.com/docs/guides.html) of mongoose.

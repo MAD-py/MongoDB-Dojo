@@ -1,6 +1,6 @@
 # **MongoDB** Shell
 
-**MongoDB** shell allows you to connect to MongoDB or MongoDB Atlas to work with the data directly from a terminal and to ease the database configuration process.
+**MongoDB** shell allows you to connect to **MongoDB** or **MongoDB** Atlas to work with the data directly from a terminal and to ease the database configuration process.
 
 ## CRUD
 
@@ -80,7 +80,7 @@ This statement returns all the documents created within the collection "course" 
 db.course.find({certifies: true})
 ```
 
-With this new sentence we will only obtain the courses that have certificate, in MongoDB there are multiple operators to make filters as complex as you want, if you are interested in learning more about the operators that MongoDB offers you can consult them in the following [link](https://www.mongodb.com/docs/manual/reference/operator/query/).
+With this new sentence we will only obtain the courses that have certificate, in **MongoDB** there are multiple operators to make filters as complex as you want, if you are interested in learning more about the operators that **MongoDB** offers you can consult them in the following [link](https://www.mongodb.com/docs/manual/reference/operator/query/).
 
 ## Update Courses
 
@@ -125,11 +125,11 @@ After this operation our "course" collection should be empty.
 
 ***Note:** To continue with the Dojo it is necessary to recreate all the courses, it is recommended to execute again the two learned sentences to create new documents in a collection.*
 
-Now that we know how to use the basic operations it is time to test how the relations work inside *MongoDB*, for this we will create a new user and we will obtain the created document.
+Now that we know how to use the basic operations it is time to test how the relations work inside **MongoDB**, for this we will create a new user and we will obtain the created document.
 
 ## Create Users
 
-To create a user we will use the same creation statement that we used for the courses, the interesting thing now in this statement is in the courses section and the come section we define the courses completed by the user and the ones he has started, we can see in these two fields arrays of objects are stored using the name '$oid' this name is used to indicate to MongoDB that the value we are going to store is an ObjectID, which will be related to another different document. In order to execute this statement it is necessary to replace the 'course_id' with a valid id from the 'course' collection.
+To create a user we will use the same creation statement that we used for the courses, the interesting thing now in this statement is in the courses section and the come section we define the courses completed by the user and the ones he has started, we can see in these two fields arrays of objects are stored using the name '$oid' this name is used to indicate to **MongoDB** that the value we are going to store is an ObjectID, which will be related to another different document. In order to execute this statement it is necessary to replace the 'course_id' with a valid id from the 'course' collection.
 
 ```bash
 db.user.insertOne(
@@ -157,7 +157,7 @@ db.user.insertOne(
 )
 ```
 
-With this we have created a relationship between this document of type user and several documents of type course, it must be taken into account that these relationships do not work as in the sql database, since if the id that we put as relationship does not exist in any collection of MongoDB, this will not generate any type of error.
+With this we have created a relationship between this document of type user and several documents of type course, it must be taken into account that these relationships do not work as in the sql database, since if the id that we put as relationship does not exist in any collection of **MongoDB**, this will not generate any type of error.
 
 ## Read Users
 
@@ -167,7 +167,7 @@ Now, if we get all the users we will see that it will only show us the ids of th
 db.user.find()
 ```
 
-If we want the relations to be resolved it is necessary to tell MongoDB to do it, this can be done with the following statement.
+If we want the relations to be resolved it is necessary to tell **MongoDB** to do it, this can be done with the following statement.
 
 ```bash
 db.user.aggregate([
@@ -194,4 +194,4 @@ In this sentence we can notice that we no longer use the find method to obtain t
 
 The result of this statement is the same as when executing the find method but this time we will get a list of objects that are the user's courses, instead of just a list of ids.
 
-These are the most basic operations that can be performed on a collection, but within MongoDB there are many other operations, in case you want to continue learning about MongoDB I invite you to visit the official MongoDB [website](https://www.mongodb.com/docs/mongodb-shell/).
+These are the most basic operations that can be performed on a collection, but within **MongoDB** there are many other operations, in case you want to continue learning about **MongoDB** I invite you to visit the official **MongoDB** [website](https://www.mongodb.com/docs/mongodb-shell/).
