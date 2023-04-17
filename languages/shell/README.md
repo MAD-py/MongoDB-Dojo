@@ -129,7 +129,7 @@ Now that we know how to use the basic operations it is time to test how the rela
 
 ## Create Users
 
-To create a user we will use the same creation statement that we used for the courses, the interesting thing now in this statement is in the courses section and the come section we define the courses completed by the user and the ones he has started, we can see in these two fields arrays of objects are stored using the name '$oid' this name is used to indicate to **MongoDB** that the value we are going to store is an ObjectID, which will be related to another different document. In order to execute this statement it is necessary to replace the 'course_id' with a valid id from the 'course' collection.
+To create a user we will use the same creation statement that we used for the courses, the interesting thing now in this statement is in the courses section how we define the courses completed by the user and the ones that have started, we can see that in these two fields arrays are stored with an ObjectId function that allows us to tell **MongoDB** that this is an id indexed from another document. To execute this statement it is necessary to replace the 'course_id' with a valid id from the 'course' collection.
 
 ```bash
 db.user.insertOne(
@@ -148,10 +148,10 @@ db.user.insertOne(
         ],
         courses: {
             "completed": [
-                {"$oid": course_id},
-                {"$oid": course_id}
+                ObjectId(course_id),
+                ObjectId(course_id)
             ],
-            "started": [{"$oid": course_id}]
+            "started": [ObjectId(course_id)]
         }
     }
 )
