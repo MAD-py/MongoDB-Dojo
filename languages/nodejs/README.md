@@ -46,7 +46,7 @@ const userSchema = new Schema({
     courses: new Schema({
         completed: [{ type: Schema.Types.ObjectId, ref: "course" }],
         started: [{ type: Schema.Types.ObjectId, ref: "course" }],
-    }),
+    }, { _id: false }),
 });
 
 const Course = mongoose.model("Course", courseSchema, "course");
