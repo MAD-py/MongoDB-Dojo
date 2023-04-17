@@ -148,7 +148,7 @@ let updateDocument = await Course
         { $set: {price: "$60.90"} },
     )
     .exec();
-console.log(updatedDocument.toObject());
+console.log(updateDocument.toObject());
 ```
 
 With this code we have updated the value of the course that has the name "Cloud Computing II" to "$60.90" dollars, the findOneAndUpdate method will only update the first document it finds with this name regardless of whether the filter used returns more documents, if you want to update all documents that meet the filter we must do it with the following method.
@@ -160,7 +160,7 @@ let updateDocument = await Course
         { $set: { certifies: true } },
     )
     .exec();
-console.log(updatedDocument.toObject());
+console.log(updateDocument.toObject());
 ```
 
 With this operation we have updated all the courses of the instructor "Jose Gomez Gomez", it is necessary to clarify that if any course of the instructor already had the certified value in true, this operation will overwrite it with the same value.
