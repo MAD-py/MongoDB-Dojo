@@ -23,7 +23,7 @@ NoSQL ("non SQL" or "not only SQL") is an approach to database design that enabl
     Some examples of this type of database are Apache HBase and Apache Cassandra that are open source.
 
 3. **Graph store**:
-    This type of database stores all its data in a graph, each piece of data is stored as a node of the Gra and its relations to other nodes is established by means of the graph edges. Although this type of database talks about relations, it is still NoSQL because it is unstructured data.
+    This type of database stores all its data in a graph, each piece of data is stored as a node of the Graph and its relations to other nodes is established by means of the graph edges. Although this type of database talks about relations, it is still NoSQL because it is unstructured data.
 
     An example of such a database is Neo4j which is open source and built on java.
 
