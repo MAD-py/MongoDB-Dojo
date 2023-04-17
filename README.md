@@ -42,7 +42,7 @@ The internal architecture of **MongoDB** is built on the concept of collections 
 
 * *Collection*: It is a group of documents that are intended for the same purpose. All collections exist within a single database and there are no defined schemas in these.
 
-* *Document*: A set of key-value pairs is called a document. Documents are composed of dynamic schemas that allow the same collection to contain documents with different structures.
+* *Document*: A set of key-value pairs that is called a document. Documents are composed of dynamic schemas that allow the same collection to contain documents with different structures.
 
 <p align="center">
 </br>
