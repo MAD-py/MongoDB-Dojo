@@ -17,7 +17,7 @@ Now to make the connection between our code in Nodejs and **MongoDB** it is nece
 ```js
 import mongoose from 'mongoose';
 
-mongoose.connect("mongodb://user:password@127.0.0.1:27017/test");
+await mongoose.connect("mongodb://user:password@127.0.0.1:27017/test");
 ```
 
 ***Note**: in the connection URL it is necessary to change the user, the password and the database to those corresponding to your project.*
