@@ -97,7 +97,7 @@ With this sentence we have updated the value of the course that has the name "Cl
 
 ```bash
 db.course.updateMany(
-    {instructor: {name: "Jose Gomez Gomez"}},
+    {instructor.name: "Jose Gomez Gomez"},
     {$set: {certifies: true}}
 )
 ```
